@@ -1,0 +1,158 @@
+/* FOOTER */
+/* Footer with deskop, tablet and mobile view. */
+/* DEFINES */
+/* DEFINES */
+/* Variables used in this project. */
+footer {
+  background-color: #f0f0f0;
+}
+
+footer .width-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 55px 0px;
+}
+
+@media (max-width: 500px), (min-width: 500px) and (max-width: 1100px) {
+  footer .width-container {
+    display: block;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: calc(100% - 100px);
+    margin: 0px 50px;
+  }
+}
+
+footer .width-container .menu-logo img {
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  footer .width-container .menu-logo img {
+    width: calc(100% - 70px);
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 500px), (min-width: 500px) and (max-width: 1100px) {
+  footer .width-container .menu-logo img {
+    width: 250px;
+    margin-left: calc((100% - 250px) / 2);
+    margin-bottom: 75px;
+  }
+}
+
+footer .width-container .footer__btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 500px), (min-width: 500px) and (max-width: 1100px) {
+  footer .width-container .footer__btn-group {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1100px) {
+  footer .width-container .footer__btn-group {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+}
+
+footer .width-container .footer__btn-group--icon {
+  float: left;
+  margin-left: 35px;
+}
+
+footer .width-container .footer__btn-group--icon div {
+  width: 50px;
+}
+
+footer .width-container .footer__btn-group--icon div img {
+  width: 100%;
+}
+
+@media (max-width: 500px), (min-width: 500px) and (max-width: 1100px) {
+  footer .width-container .footer__btn-group--icon:nth-child(4) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 500px), (min-width: 500px) and (max-width: 1100px) {
+  footer .width-container .footer__btn-group--icon {
+    margin-right: 5vw;
+    margin-left: 0px;
+  }
+}
+
+footer .width-container .footer-newsletter {
+  text-align: center;
+}
+
+@media (max-width: 500px), (min-width: 500px) and (max-width: 1100px) {
+  footer .width-container .footer-newsletter {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+}
+
+footer .width-container .footer-newsletter .footer-newsletter--text {
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 500px), (min-width: 500px) and (max-width: 1100px) {
+  footer .width-container .footer-newsletter .footer-newsletter--text {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+}
+
+footer .width-container .footer-newsletter .footer-newsletter--button {
+  width: 363px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  border: 3px solid #000000;
+  font-size: 30px;
+  line-height: 2.5em;
+  font-weight: bold;
+  color: #000000;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  footer .width-container .footer-newsletter .footer-newsletter--button {
+    width: 100%;
+  }
+}
+
+footer .width-container .footer-newsletter .footer-newsletter--button:hover {
+  color: #f0f0f0;
+  background-color: #6764cb;
+  border: 3px solid #6764cb;
+}
+/*# sourceMappingURL=footer.css.map */

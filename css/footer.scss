@@ -1,0 +1,125 @@
+/* FOOTER */
+
+/* Footer with deskop, tablet and mobile view. */
+
+/* DEFINES */
+@import "defines";
+
+footer {
+  background-color: $light-color;
+
+  .width-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 0px;
+
+    @media #{$mobile}, #{$tablet} {
+      display: block;
+      justify-items: center;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% - 100px);
+      margin: 0px 50px;
+    }
+
+    .menu-logo {
+
+      img {
+        width: 100%;
+
+        @media #{$mobile} {
+          width: calc(100% - 70px);
+          margin-left: 35px;
+        }
+        @media #{$mobile}, #{$tablet} {
+          width: 250px;
+          margin-left: calc((100% - 250px) / 2);
+          margin-bottom: 75px;
+        }
+      }
+    }
+
+    .footer__btn-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media #{$mobile}, #{$tablet} {
+        margin-bottom: 100px;
+      }
+      @media #{$tablet} {
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+      }
+    }
+
+    .footer__btn-group--icon {
+      float: left;
+      margin-left: 35px;
+
+      div {
+        width: 50px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(4) {
+        @media #{$mobile}, #{$tablet} {
+          margin-right: 0;
+        }
+      }
+
+      @media #{$mobile}, #{$tablet} {
+        margin-right: 5vw;
+        margin-left: 0px;
+      }
+    }
+
+    .footer-newsletter {
+      text-align: center;      
+
+      @media #{$mobile}, #{$tablet} {
+        margin-bottom: 25px;
+        width: 100%;
+      }
+
+      .footer-newsletter--text {
+        color: $black-color;
+        font-size: 16px;
+        font-weight: bold;
+
+        @media #{$mobile}, #{$tablet} {
+          margin-top: 0px;
+          margin-bottom: 25px;
+        }
+      }
+
+      .footer-newsletter--button {
+        width: 363px;
+        border-radius: 10px;
+        background-color: $light-color;
+        border: 3px solid $black-color;
+        font-size: 30px;
+        line-height: 2.5em;
+        font-weight: bold;
+        color: $black-color;
+        transition: all 200ms ease-in-out;
+        margin: 0 auto;
+
+        @media #{$mobile} {
+          width: 100%;
+        }
+
+        &:hover{
+          color: $light-color;
+          background-color: $blue-color;
+          border: 3px solid $blue-color;
+        }
+      }
+    }
+  }
+}

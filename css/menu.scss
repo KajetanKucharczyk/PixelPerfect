@@ -1,0 +1,273 @@
+/* MENU */
+
+/* Menu with mobile and tablet version. Fized position on scroll. Language drop-down menu included. */
+
+/* DEFINES */
+@import "defines";
+
+header {
+  z-index: 1;
+
+  @media #{$desktop} {
+    &.header--scrollable {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background-color: $white-color;
+      padding: 10px 0px;
+      margin: 0 auto;
+      width: 100%;
+      border-bottom: 1px solid $grey-color;
+    }
+  }
+
+  @media #{$mobile}, #{$tablet}{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background-color: $white-color;
+    top: 0px;
+    left: 0px;
+  }
+
+  .width-container {    
+    margin: 43px auto;
+
+    @media #{$desktop} {
+      &.menu-container--scrollable {
+        margin: 0px auto;
+      }
+    }    
+
+    @media #{$mobile}, #{$tablet}{
+      padding: 0px 30px;
+      width: calc(100% - 60px);
+      margin: 35px auto;      
+    }
+
+    .menu {
+
+      @media #{$mobile}, #{$tablet} {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .menu__logo {
+        display: flex;
+        align-items: center;
+        float: left;
+        
+        @media #{$mobile}, #{$tablet} {
+          float: initial;
+        }
+      }
+
+      .menu-container {        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media #{$mobile} {
+          display: block;
+        }
+
+        @media #{$mobile}, #{$tablet} {
+          position: fixed;
+          width: 100%;
+          height: auto;
+          background: $black-color;
+          top: 140px;
+          left: 0px;
+          background-color: $black-color;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 200ms ease-in-out;
+
+          li {
+            width: 100%;
+          }
+
+          &.clicked {
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+
+        nav {
+
+          .menu-container--item {
+            display: inline-block;
+  
+            a {
+              font-size: 22px;
+              line-height: 1.2em;
+              font-weight: bold;
+              margin: 0 20px;
+              color: $black-color;
+              transition: all 200ms ease-in-out;
+
+              @media #{$mobile}, #{$tablet} {
+                color: $white-color;
+                line-height: 2em;
+                font-size: 35px;
+              }
+  
+              &.active {
+                color: $blue-color;          
+              }
+  
+              &:hover {
+                color: $blue-color;
+              }
+            }
+          }
+  
+          
+        }
+        
+      }
+      
+
+      .menu__language {
+        width: 140px;
+        height: 55px;
+        border-radius: 10px;
+        border: 1px solid #dadada;
+        position: relative;
+        cursor: pointer;
+
+        .menu__language--PL {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .menu__language--image {
+            border: 1px solid $grey-color;
+          }
+        }
+        .menu__language--ENG {
+          display: none;
+          justify-content: space-between;
+          align-items: center;
+
+          .menu__language--image {
+            border: 1px solid $grey-color;
+          }
+        }
+        .menu__language--DE {
+          display: none;
+          justify-content: space-between;
+          align-items: center;
+
+          .menu__language--image {
+            border: 1px solid $grey-color;
+          }
+        }
+
+        @media #{$mobile} {
+          margin: 75px auto;
+        }
+        @media #{$tablet} {
+          width: 400px;
+          margin-right: 2vw;
+        }
+
+        .menu__language--text {
+          font-size: 22px;
+          line-height: 55px;
+          color: #b7b7b7;
+          margin-left: 20px;
+        }
+
+        .menu__language--btn {
+          margin-right: 10px;
+        }
+
+        .menu__language--submenu {
+          position: absolute;
+          top: -1px;
+          left: -1px;
+          width: 100%;
+          height: auto;
+          background-color: $white-color;
+          border-radius: 10px;
+          border: 1px solid #dadada;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 200ms ease-in-out;
+
+          &.menu__language--submenu--clicked {
+            opacity: 1;
+            pointer-events: initial;
+          }
+            
+          div {
+            display: inline-block;
+            border-bottom: 1px solid #dadada;
+            width: calc(100% - 20px);
+            padding-left: 20px;
+            line-height: 55px;
+            font-size: 22px;
+            color: #b7b7b7;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .menu__language--image {
+              margin-right: 20px;
+              border: 1px solid $grey-color;
+            }
+
+            &:nth-child(1) {
+              border-radius: 10px 10px 0 0;
+            }
+            &:nth-child(3) {
+              border-bottom: 0;
+              border-radius: 0 0 10px 10px;
+            }
+
+            &:hover {
+              background-color: $light-color;
+            }
+          }
+        }
+      }
+
+      .menu__mobile-menu-widget {
+        width: 35px;
+        height: 25px;
+        display: none;
+        cursor: pointer;
+        
+
+        &.menu__mobile-menu-widget--clicked {
+          & > div:nth-child(2) {
+            background-color: rgba(255, 255, 255, 0);
+          }
+          & > div:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+          }
+          & > div:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+          }
+        }
+
+        @media #{$mobile}, #{$tablet} {
+          display: initial;
+        }
+
+        .menu__mobile-menu-widget--rectangle {
+          width: 35px;
+          height: 5px;
+          border-radius: 2px;
+          background-color: #000000;
+          margin-bottom: 5px;
+          transition: all 200ms ease-in-out;
+          transform-origin: 50% 50%;
+        }
+      }
+    }
+  }  
+}

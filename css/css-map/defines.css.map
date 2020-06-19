@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,aAAa;AAEb,qCAAqC",
+    "sources": [
+        "defines.scss"
+    ],
+    "names": [],
+    "file": "defines.css"
+}

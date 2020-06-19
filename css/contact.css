@@ -1,0 +1,276 @@
+/* CONTACT */
+/* Contact field with floating labels. */
+/* DEFINES */
+/* DEFINES */
+/* Variables used in this project. */
+section:nth-child(4) {
+  background-image: radial-gradient(circle 1008px at center, #808bdb 0%, #645fc9 100%);
+}
+
+section:nth-child(4) .contact-block {
+  max-width: 1030px;
+  padding: 65px 0px 80px 0;
+  margin-bottom: 80px;
+}
+
+section:nth-child(4) .contact-block .contact-block__header {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+section:nth-child(4) .contact-block .contact-block__header:after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 68px;
+  border-radius: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: -23px;
+  right: calc(50% - 34px);
+}
+
+section:nth-child(4) .contact-block .contact-block__column {
+  display: inline-block;
+}
+
+section:nth-child(4) .contact-block .contact-block__column:nth-child(1) {
+  width: calc(50% - 10px);
+  padding: 0 10px 0 0;
+  float: left;
+}
+
+section:nth-child(4) .contact-block .contact-block__column:nth-child(2) {
+  width: calc(50% - 10px);
+  padding: 0 0 0 10px;
+}
+
+@media (min-width: 500px) and (max-width: 1100px) {
+  section:nth-child(4) .contact-block .contact-block__column:nth-child(1), section:nth-child(4) .contact-block .contact-block__column:nth-child(2) {
+    width: calc(50% - 20px);
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  section:nth-child(4) .contact-block .contact-block__column:nth-child(1), section:nth-child(4) .contact-block .contact-block__column:nth-child(2) {
+    width: calc(100% - 50px);
+    padding: 0 25px 0 25px;
+    float: initial;
+  }
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field input, section:nth-child(4) .contact-block .contact-block__column .column__field label {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field label {
+  pointer-events: none;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field input[type=text], section:nth-child(4) .contact-block .contact-block__column .column__field input[type=email], section:nth-child(4) .contact-block .contact-block__column .column__field select, section:nth-child(4) .contact-block .contact-block__column .column__field textarea {
+  width: calc(100% - 40px);
+  background-color: white;
+  border-radius: 10px;
+  color: #000000;
+  font-family: Muli;
+  font-size: 20px;
+  border: 0px;
+  padding: 20px;
+  margin-top: 35px;
+  resize: none;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field input[type=text] option:nth-child(1), section:nth-child(4) .contact-block .contact-block__column .column__field input[type=email] option:nth-child(1), section:nth-child(4) .contact-block .contact-block__column .column__field select option:nth-child(1), section:nth-child(4) .contact-block .contact-block__column .column__field textarea option:nth-child(1) {
+  display: none;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field textarea {
+  height: 250px;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field select {
+  width: 100%;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field input:placeholder-shown + label, section:nth-child(4) .contact-block .contact-block__column .column__field select:not(:checked) + label, section:nth-child(4) .contact-block .contact-block__column .column__field textarea:placeholder-shown + label {
+  cursor: text;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: translate(20px, 80px) scale(1.5);
+          transform: translate(20px, 80px) scale(1.5);
+  color: #bfbfbf;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field ::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field input:not(:placeholder-shown) + label,
+section:nth-child(4) .contact-block .contact-block__column .column__field input:focus + label, section:nth-child(4) .contact-block .contact-block__column .column__field select:focus ~ label,
+section:nth-child(4) .contact-block .contact-block__column .column__field select:not([value=""]):valid ~ label,
+section:nth-child(4) .contact-block .contact-block__column .column__field textarea:not(:placeholder-shown) + label,
+section:nth-child(4) .contact-block .contact-block__column .column__field textarea:focus + label, section:nth-child(4) .contact-block .contact-block__column .column__field select:focus ~ label {
+  -webkit-transform: translate(20px, 30px) scale(1);
+          transform: translate(20px, 30px) scale(1);
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field--gender--text {
+  font-size: 24px;
+  font-weight: normal;
+  color: #f0f0f0;
+  margin: 45px 0 25px 0;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field--gender--container {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f0f0f0;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field--gender--container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field--gender--container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field--gender--container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+section:nth-child(4) .contact-block .contact-block__column .column__field--gender--container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000000;
+}
+
+section:nth-child(4) .contact-block .contact-block__button {
+  width: 363px;
+  border-radius: 10px;
+  background-color: rgba(240, 240, 240, 0);
+  border: 3px solid #f0f0f0;
+  font-size: 30px;
+  line-height: 2.5em;
+  font-weight: bold;
+  color: #f0f0f0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  section:nth-child(4) .contact-block .contact-block__button {
+    width: calc(100% - 60px);
+  }
+}
+
+section:nth-child(4) .contact-block .contact-block__button:hover {
+  color: #000000;
+  background-color: #f0f0f0;
+  border: 3px solid #000000;
+}
+
+section:nth-child(4) .contact-block .contact-block__rodo--container {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f0f0f0;
+  width: 400px;
+  margin: 80px auto 65px auto;
+}
+
+@media (min-width: 500px) and (max-width: 1100px), (max-width: 500px) {
+  section:nth-child(4) .contact-block .contact-block__rodo--container {
+    width: 180px;
+  }
+}
+
+section:nth-child(4) .contact-block .contact-block__rodo--container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+section:nth-child(4) .contact-block .contact-block__rodo--container input:checked ~ .contact-block__rodo--container--checkmark:after {
+  display: block;
+}
+
+section:nth-child(4) .contact-block .contact-block__rodo--container .contact-block__rodo--container--checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  background-color: #f0f0f0;
+}
+
+section:nth-child(4) .contact-block .contact-block__rodo--container .contact-block__rodo--container--checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #000000;
+  border-width: 0 3px 3px 0;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,31 @@
+/* GENERAL */
+/* General styles applied to whole page and elements that are the same. */
+/* DEFINES */
+/* DEFINES */
+/* Variables used in this project. */
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Muli";
+  color: #000000;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.width-container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.cleaner {
+  clear: both;
+}
+/*# sourceMappingURL=general.css.map */
